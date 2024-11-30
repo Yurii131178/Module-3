@@ -1,6 +1,132 @@
-.title {
-  text-transform: uppercase;
-  font-size: 30px;
-  color: rgb(117, 29, 9);
-  background-color: bisque;
+/* ===================== ГЛОБАЛЬНЕ СИДАННЯ СТИЛІВ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
 }
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.5;
+  color: #d75a00;
+}
+.box {
+  box-sizing: border-box;
+  width: 150px;
+  height: 150px;
+
+  border: 5px solid #f44336;
+  padding: 30px;
+  margin-bottom: 30px;
+  background-color: #ffeb3b;
+}
+
+.text {
+  padding-top: 20px;
+  padding-left: 80px;
+  padding-bottom: 15px;
+
+  background-color: #eafac7;
+  border: 2px dashed #212121;
+  margin-bottom: 30px;
+}
+/* MARGIN */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.5;
+  color: #212121;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.post {
+  padding: 20px;
+
+  max-width: 400px;
+  background-color: #fff;
+  border: 2px dashed #2a2a2a;
+}
+
+.post-thumb {
+  margin-bottom: 30px;
+  border: 2px dashed tomato;
+}
+
+.post-heading {
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  border: 2px dashed teal;
+}
+
+.post-text {
+  margin-bottom: 0;
+  margin-top: 0;
+
+  border: 2px dashed blue;
+}
+
+/* ===================== ГЛОБАЛЬНЕ СИДАННЯ СТИЛІВ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+/* Обнулення маржина body вже є певним «стандартом» сучасної розробки, то ж нормалізатор modern-normalize містить цей крок. Тому, якщо на вашій веб-сторінці застосовується нормалізатор,, обнуляти маржин body у своєму коді не потрібно. */
+
+/* =========BORDER============= */
+
+.box-1 {
+  width: 300px;
+  height: 300px;
+  border: 5px dotted #d75a00;
+}
+
+/* ==========border-*=================== */
+/*Також є властивості, що окремо задають значення рамки. Їх можна застосовувати в якості альтернативи властивості border, або щоб при зміні лиш одного значення рамки не дублювати інші властивості.
+
+
+border-width: значення;
+border-style: значення;
+border-color: значення; */
+
+.box-1:hover {
+  border-color: aqua;
+}
+
+/* Індивідуальні рамки */
