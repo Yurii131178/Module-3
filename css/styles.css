@@ -169,8 +169,7 @@ border-color: значення; */
   height: 240px;
   border-radius: 50%;
   background-color: #4caf50;
-  margin: 30px;
-  m
+  margin-top: 30px;
 }
 
 /* individual border corner rounding */
@@ -197,5 +196,168 @@ img {
 
   overflow: hidden;
 }
-/* Властивість overflow */
 
+/*       <!-- Властивість overflow -->
+
+<!--overflow: visible | hidden | scroll | auto  --> 
+
+visible - by default
+hidden - ховає текст. Ніколи не задавай текстовому блоку властивість "height"
+scroll - скролить приховану інфу з двома скролбарами
+Auto - скролить з потрібним скролбаром */
+
+/* Типи елементів */
+/* DISPLAY є блокові(block) та рядкові (inline)*/
+/* Рядкові елементи призначені для виділення та оформлення текстового контенту. Наприклад посилань кнопок, зображень тощо.
+Блокові елементи використовуються для розмітки текстових контейнерів (заголовків, списків, абзаців) і великих смислових розділів (секцій, шапки, підвалу). */
+/* Блокові елементи можуть бути візуально представлені, як прямокутні області, що йдуть одна за одною зверху вниз.
+Для них задано властивість display: block. 
+Вони займають всю доступну ширину рядка всередині батьківського елемента.
+Їхня висота визначається вмістом, якщо явно не задана у властивості height.
+Вони завжди починаються з нового рядка, тому кілька сусідніх блокових елементів розташовані вертикально один під одним.
+Їм можна задавати будь-які властивості геометрії елемента: ширину, висоту, падінги, рамки та маржини.
+Переважна більшість елементів – блокові. Наприклад <h1>, <p>, <section>, <ul>, <li>, <div>, <header> тощо.*/
+
+/* +++++++++++++++++++++++++++++++++++++Фіксована ширина++++++++++++++++++++++++++++++++++++
+
+Навіть якщо ширину блокових елементів задано явно, елементи все одно розташовуватимуться вертикально один під одним. Усе вільне місце в рядку за замовчуванням займає автоматичний правий відступ (margin-right) елемента. */
+body {
+  background-color: #f9f9fd;
+}
+
+.box {
+  /* width: 240px; граємось з шириною блока */
+  width: 1000px;
+  /* width: 70%; граємось з шириною блока */
+  height: 80px;
+}
+
+.indigo {
+  background-color: #3f51b5;
+}
+
+.green {
+  background-color: #4caf50;
+}
+
+.amber {
+  background-color: #ffc107;
+}
+
+/* Колапсування вертикальних маржинів */
+.box-6 {
+  width: 200px;
+  height: 100px;
+}
+
+.top {
+  margin-bottom: 10px;
+  background-color: teal;
+}
+
+.bottom {
+  margin-top: 20px;
+  background-color: palevioletred;
+}
+
+/* ===============================Горизонтальне центрування блокових елементів ==========================================*/
+/* За замовчуванням блоковий елемент має автоматичний правий маржин, який займає все вільне місце в рядку. */
+/* Якщо задати автоматичні лівий і правий маржини, вільний простір розподіляється між ними, і блочний елемент центрується. */
+body {
+  background-color: #f9f9fd;
+  font-family: sans-serif;
+  line-height: 1.5;
+  color: #fff;
+  font-size: 20px;
+}
+
+.parent {
+  background-color: #3f51b5;
+}
+
+.child {
+  max-width: 220px;
+  /* max-width: 1000px; граємось з шириною блока*/
+  margin: 0 auto;
+  background-color: #4caf50;
+  text-align: center;
+}
+
+.parent,
+.child {
+  padding: 20px;
+  border-radius: 4px;
+}
+/* ====================== VIEWPORT======================= */
+/* ==================Елемент-контейнер. Тег div ============================*/
+/* <div class="container"></div> */
+/* .container {
+  width: 480px;
+  margin: 0 auto;
+  padding: 0 15px;
+} */
+body {
+  font-family: sans-serif;
+  line-height: 1.5;
+  background-color: #f9f9fd;
+  color: #212121;
+}
+
+.container {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  border: 1px dashed #2a2a2a;
+}
+/* риклад з кількома контейнерами */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  line-height: 1.5;
+  background-color: #f9f9fd;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+.container {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  outline: 2px dashed #f44336;
+}
+
+.page-header,
+.page-footer,
+.hero,
+.about,
+.features {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.page-header {
+  background-color: #e0e0e0;
+}
+
+.hero {
+  background-color: #4caf50;
+}
+
+.about {
+  background-color: #ffc107;
+}
+
+.features {
+  background-color: #2196f3;
+}
+
+.page-footer {
+  background-color: #90a4ae;
+}
+/* ===================================Рядкові елементи (inline)====================================== */
